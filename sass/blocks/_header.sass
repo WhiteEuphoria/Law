@@ -17,10 +17,21 @@
     display: flex
     align-items: center
     justify-items: space-between
+
   &__mark
     width: 21px
     height: 36px
     cursor: pointer
+  &__logo
+    &--mobile
+      display: none
+.header-logo
+  z-index: 100
+  display: none
+.logo-mobile
+  display: block
+.attr-mobile
+  display: none
 .nav-menu
   display: flex
   &__item
@@ -33,6 +44,7 @@
       margin-right: 0
     & a
       color: white
+
 .call-btn
   border: 2px solid #B52129
   border-radius: 8px
@@ -45,6 +57,4 @@
     background: transparent
     cursor: pointer
 .burger
-  display: none
-.logo-mobile
   display: none
