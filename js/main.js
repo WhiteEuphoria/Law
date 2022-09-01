@@ -1,0 +1,66 @@
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  // direction: 'vertical',
+  speed: 800,
+  loop: false,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper__button-next',
+    prevEl: '.swiper__button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+
+  type: 'progressbar',
+
+  keyboard: {
+    enabled : true
+  },
+  // autoplay: {
+  //   delay: 3000,
+  //   stopOnLastSlide: false,
+  //   disableOnInteraction: true
+  // }
+});
+const modalBtn = document.querySelector(".call-btn");
+const modalsBtn = document.querySelector(".call-button");
+const offerModalBtn = document.querySelector(".offer__call-btn");
+const closeBtn = document.querySelector(".modal__dialog--close");
+const burgerBtn = document.querySelector(".burger");
+
+
+
+modalBtn.addEventListener("click", function (){
+    document.querySelector(".modal").classList.toggle("modal-active");
+});
+modalsBtn.addEventListener("click", function (){
+    document.querySelector(".modal").classList.toggle("modal-active");
+});
+offerModalBtn.addEventListener("click", function (){
+    document.querySelector(".modal").classList.toggle("modal-active");
+});
+closeBtn.addEventListener("click", function (){
+    document.querySelector(".modal").classList.remove("modal-active");
+});
+burgerBtn.addEventListener("click", function (){
+    document.querySelector(".burger").classList.toggle("burger--active");
+});
+let screenWindows = screen.width;
+let block = document.querySelector(".footer__wrapp");
+let elem1 = document.querySelector(".footer__links")
+let elem2 = document.querySelector(".footer__time")
+  if (screenWindows <= 1155) {
+    let wrap = document.createElement("p")
+    block.insertBefore(wrap, elem2)    
+    wrap.append(elem1)
+    wrap.appendChild(elem2)
+  }

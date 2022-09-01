@@ -1,0 +1,35 @@
+.modal
+  display: none
+  &__overlay
+    position: fixed
+    left: 0
+    top: 0
+    right: 0
+    bottom: 0
+    background-color: black
+    opacity: 0.9
+    z-index: 100
+    animation-duration: 1s
+    animation-name: visible
+  &__dialog
+    z-index: 100
+    position: fixed
+    top: 50%
+    left: 50%
+    margin-right: -50%
+    transform: translate(-50%, -50%)
+    padding: 45px 65px
+    background: #464646
+    &--title
+      margin: 0
+      padding-bottom: 35px
+      animation-duration: 0.8s
+      animation-name: font
+    &--close
+      position: fixed
+      right: 8px
+      top: 3px
+.modal-active
+  display: block
+  animation-duration: 1.2s
+  animation-name: visible
